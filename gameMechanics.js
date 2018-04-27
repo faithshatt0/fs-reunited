@@ -191,16 +191,17 @@ function removeLife() {
 }
 
 //JQUERY EVENT LISTENERS FOR MOVEMENT
-$(document).keydown(function() {
+$(document).keydown(function(e) {
 	if(event.keyCode==37) leftArrowDown = true;
 	if(event.keyCode==39) rightArrowDown = true;
 	if(event.keyCode==38) upArrowDown = true;
 	
-	event.preventDefault();
+	e.preventDefault();
 });
 
 $(document).keyup(function() {
 	if(event.keyCode==37) leftArrowDown = false;
 	if(event.keyCode==39) rightArrowDown = false;
 	if(event.keyCode==38) upArrowDown = false;
+	event.preventDefault();
 });
