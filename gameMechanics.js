@@ -195,6 +195,8 @@ $(document).keydown(function() {
 	if(event.keyCode==37) leftArrowDown = true;
 	if(event.keyCode==39) rightArrowDown = true;
 	if(event.keyCode==38) upArrowDown = true;
+	
+	event.preventDefault();
 });
 
 $(document).keyup(function() {
